@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Главная. Автосвет.</title>
+    <!-- все заголовки одним цветом
+    <style>
+        h3 { color:darkblue}
+    </style>
+-->
+    <style>
+        /*        скрыть чек бокс*/
+        .del {
+            display: none;
+        }
+
+        .del:not(:checked)+label+* {
+            display: none;
+        }
+
+        /*CSS кнопка */
+        .del:not(:checked)+label,
+        .del:checked+label {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 2px;
+            color: #000000;
+            background: #f0f0f0;
+            cursor: pointer;
+        }
+
+        .del:checked+label {
+            color: #f8f8f8;
+            background: #f8f8f8;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="pages">
+    <h1>Главная</h1>
+    <ul class="menu">
+        <li><a href="catalog/shop.html" style="color: black">Перейти в товары каталога</a></li>
+        <li><a href="contacts.html" style="color: black">Перейти в контакты</a></li>
+    </ul>
+
+    <h3 style="margin-bottom: 0px">Регистрация</h3>
+    <input type="checkbox" id="press" class="del" /><label for="press" class="del">Нажмите для регистрации</label>
+    <div>
+        <form name=RegistrationInfo action="#">
+            <table>
+                <tr>
+                    <td>
+                        <p1>Ваше имя:</p1>
+                    </td>
+                    <td>
+                        <p2><input id="PersonName" type="text" placeholder="Ваше имя" size="20" style="height:17px"></p2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p1>Пароль:</p1>
+                    </td>
+                    <td>
+                        <p2><input id="PersonPassword" type="password" placeholder="Пароль" size="20" style="height:17px"></p2>
+                    </td>
+                </tr>
+
+            </table>
+            <br> Пол
+            <br> М
+            <input type="radio" name="sex">
+            <br> Ж
+            <input type="radio" name="sex"> <br>
+            <p3>Ваши увлечения:&#8195</p3>
+            <p3>&#8195Спорт</p3>
+            <input type="checkbox">
+            <p3>&#8195IT</p3>
+            <input type="checkbox">
+            <p3>&#8195Игра на музыкальных инструментах</p3>
+            <input type="checkbox">
+            <p3>&#8195Танцы</p3>
+            <input type="checkbox"> <br>
+            <input type="submit" value="Отправить данные">
+
+            <input type="reset" value="Отмена">
+        </form>
+    </div>
+</body>
+
+</html>
