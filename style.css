@@ -1,20 +1,29 @@
 /*стиль страниц сайта*/
+
 #pages {
     background-color: #f8f8f8
 }
 
+
 /*Стиль заголовков страниц*/
+
 h1 {
     color: #555555
 }
 
+
 /*стиль заголовков групп товаров*/
+
 h2 {}
 
+
 /*стиль группы товара*/
+
 h3 {}
 
+
 /*стиль заголовков товара каталога*/
+
 h4 {
     color: black;
     font-size: 18px;
@@ -22,24 +31,62 @@ h4 {
     background-color: #eaeaea;
 }
 
+
 /*стиль ссылок в меню сайта: убираем маркеры для всех списков!*/
-ul {
+
+.menu li {
     list-style-type: none;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #000;
+    text-align: center;
 }
 
-a {
+.menu li a {
     color: black;
     font-size: 14px;
     font-style: normal;
 }
 
+.menu li:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.menu li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.menu li a:hover {
+    color: darkgrey
+}
+.menu li a:active {
+    color: green
+}
+
+
+
+
+/*
+a {
+    color: black;
+    font-size: 14px;
+    font-style: normal;
+}
+*/
+
+
 /*стиль ссылок в описании сайта, цвет наследуется из общего стиля с сылками меню*/
+
 #extLink {
     font-size: 10px;
     font-style: italic;
 }
 
+
 /*стиль текста в параграфах*/
+
 h5 {
     text-indent: 10px;
 }
@@ -51,7 +98,9 @@ h5 {
     line-height: 16px
 }
 
+
 /*стиль характеристик*/
+
 #characteristicsstyle {
     color: #107040;
     font-size: 15px;
@@ -59,17 +108,20 @@ h5 {
     line-height: 17px;
     padding-left: 24px;
     /* Смещаем текст вправо */
-
 }
 
+
 /*картинка вместо маркера для списка в характеристиках */
+
 #characteristicsstyleList {
     width: 20;
     height: 20;
     list-style-image: url(images/imgonline-com-ua-Resize-CpM3bQU0kLJFf.jpg);
 }
 
+
 /*стиль полного описания*/
+
 #FulltDescription {
     color: #484343;
     font-size: 16px;
@@ -78,13 +130,17 @@ h5 {
     text-align: left
 }
 
+
 /*стиль списка плюсов и минусов*/
+
 #listPM {
     list-style-type: none;
     text-indent: 30px;
 }
 
+
 /*таблица для контактных данных*/
+
 table {
     /*            width: 300px;*/
     /* Ширина таблицы */
@@ -104,21 +160,24 @@ TH {
     /* Выравнивание по ширине, что означает одновременное выравнивание по левому и правому краю. Чтобы произвести это действие браузер в этом случае добавляет пробелы между словами */
 }
 
+
 /*стиль текста для вида контакта или для регистрационной информации*/
+
 p1 {
     font-size: 16px;
     color: darkblue
 }
 
+
 /*стиль текста для контактов*/
+
 #phoneNumberPlusEmail {
     font-size: 85%;
-    color: 00:dd:dd
+    color: 00: dd: dd
 }
 
 #PersonName,
 #PersonPassword {
     font-size: 10px;
-    color:brown;
-    
+    color: brown;
 }
