@@ -1,6 +1,6 @@
 /*стиль страниц сайта*/
 
-#pages {
+.pages {
     background-color: #f8f8f8
 }
 
@@ -9,6 +9,115 @@
 
 h1 {
     color: #555555
+}
+
+
+/*стиль для меню и логотипа сайта: два блока рядом, в первом лого с масштабированием, во втором меню*/
+
+.header div:first-child {
+    float: left;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    /*    border-color: black*/
+}
+
+.header div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.header div:nth-child(2) {
+    float: left;
+}
+
+.header div {
+    margin-right: 10px;
+}
+
+
+/*стиль для блока footer */
+
+.footer {}
+
+
+/*стиль текста ссылок товаров*/
+
+.goods {
+    color: black;
+    font-size: 14px;
+    font-style: normal;
+    text-decoration: none;
+}
+
+
+/*рамка картинки товара без смещения*/
+
+.goods img {
+    outline: 2px solid black;
+}
+
+
+/*исчезновение рамки при наведении на картинку без смещения*/
+
+.goods img:hover {
+    outline: none;
+}
+
+
+/*стиль ссылок в меню сайта: убираем маркеры для всех списков! */
+
+.menu li {
+    list-style-type: none;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+
+/*текст в ссылках меню*/
+
+.menu li a {
+    color: black;
+    font-size: 14px;
+    font-style: normal;
+}
+
+
+/*и убираем отступ и поля*/
+
+.menu {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*рамка в меню*/
+
+.menu li:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.menu li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+/*цвет при наведении на пункт меню - пункт 1 задания*/
+
+.menu li a:hover {
+    color: darkgrey
+}
+
+
+/*цвет при выборе пункта меню*/
+
+.menu li a:active {
+    color: green
 }
 
 
@@ -30,51 +139,6 @@ h4 {
     font-weight: 400;
     background-color: #eaeaea;
 }
-
-
-/*стиль ссылок в меню сайта: убираем маркеры для всех списков!*/
-
-.menu li {
-    list-style-type: none;
-    width: 200px;
-    height: 30px;
-    border: 1px solid #000;
-    text-align: center;
-}
-
-.menu li a {
-    color: black;
-    font-size: 14px;
-    font-style: normal;
-}
-
-.menu li:first-child {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.menu li:last-child {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-.menu li a:hover {
-    color: darkgrey
-}
-.menu li a:active {
-    color: green
-}
-
-
-
-
-/*
-a {
-    color: black;
-    font-size: 14px;
-    font-style: normal;
-}
-*/
 
 
 /*стиль ссылок в описании сайта, цвет наследуется из общего стиля с сылками меню*/
@@ -122,7 +186,7 @@ h5 {
 
 /*стиль полного описания*/
 
-#FulltDescription {
+.FulltDescription {
     color: #484343;
     font-size: 16px;
     font-weight: 400;
@@ -180,4 +244,60 @@ p1 {
 #PersonPassword {
     font-size: 10px;
     color: brown;
+}
+
+
+/*первые буквы в словах заглавные в формах для ввода текста и ФИО*/
+
+#PersonName {
+    text-transform: capitalize;
+}
+
+#clientmessage {
+    text-transform: capitalize;
+}
+
+#clientEmail:focus {
+    color: greenyellow;
+    background-color: blue;
+}
+
+
+/*стиль таблицы характеристик товара - пункт 6 задания*/
+
+.HaedlightCharacteristics tr,
+td {
+    margin: 5px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.HaedlightCharacteristics tr td:first-child {
+    text-align: left;
+}
+
+
+/*стиль таблицы регистрации, таблица по пункту 9-11 задания*/
+
+.registrationForm tr,
+td,
+th {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.registrationForm tr:first-child {
+    height: 30px;
+}
+
+
+/*стиль первых букв в параграфах описания товара - пункт 8 задания*/
+
+.FulltDescription:first-letter {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    /*    font-family: cursive;*/
 }

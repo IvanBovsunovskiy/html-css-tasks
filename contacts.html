@@ -4,40 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css"> </head>
 
-<body id="pages">
+<body class="pages">
     <h1>Контакты</h1>
-    <ul class="menu">
-        <li><a href="index.html">На главную</a></li>
-        <li><a href="catalog/shop.html">В каталог интернет магазина</a></li>
-    </ul>
+    <div class='header'>
+        <div> <img src="images/logo.jpg" alt="logo"> </div>
+        <div>
+            <ul class="menu">
+                <li><a href="index.html">На главную</a></li>
+                <li><a href="catalog/shop.html">В каталог интернет магазина</a></li>
+            </ul>
+        </div>
+        <!--        убираем обтекание элементов-->
+        <div style="clear: both;"></div>
+    </div>
     <table>
         <tr>
-            <td>
+            <th>
                 <p1>Телефон:</p1>
-            </td>
+            </th>
             <td>
                 <p2 id="phoneNumberPlusEmail">&#8195+7-333-333-33-33</p2>
             </td>
             <!--            широкий пробел &#8195-->
         </tr>
         <tr>
-            <td>
+            <th>
                 <p1>E-mail: </p1>
-            </td>
+            </th>
             <td>
                 <p2 id="phoneNumberPlusEmail">&#8195qwerty@qwerty.com</p2>
             </td>
         </tr>
     </table>
-
-
-
-
-
-
+    <h3 style="font-size: 16px">Если вы хотите чтобы мы связались с вами напишите нам  </h3>
+    <input id="clientmessage" type="" placeholder="Укажите ваш e-mail" size="100" style="height:50px">
+    <h3 style="font-size: 16px">и укажите ваш e-mail:</h3>
+    <input id="clientEmail" type="text" placeholder="Напишите нам" size="20" style="height:17px"><br>
+    <input type="submit" value="Отправить данные">
+    
+    <div class='footer'>
+        <hr align="center" size="2" color="#aaaaaa" />
+        <h7>Geekbrains education</h7>
+        <br />
+        <h7>Все права защищены &copy;</h7> <a href="https://geekbrains.ru/">Geekbrains</a> </div>
 </body>
 
 </html>
