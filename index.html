@@ -42,72 +42,82 @@
     <h1>Главная</h1>
     <div class='header'>
         <div> <img src="images/logo.jpg" alt="logo"> </div>
-        <div>
-            <ul class="menu">
-                <li><a href="catalog/shop.html">Перейти в товары каталога</a></li>
-                <li><a href="contacts.html">Перейти в контакты</a></li>
-            </ul>
-        </div>
+        <ul class="menu">
+            <li><a href="contacts.html">Перейти в контакты</a></li>
+            <li><a href="catalog/shop.html">Перейти в товары каталога</a>
+                <ul class='dropdownMenu'>
+                    <li><a href="catalog/shop.html">Перейти в общий список товаров</a></li>
+                    <li><a href="catalog/vw.html">Перейти в товары для VW</a></li>
+                    <li><a href="catalog/ford.html">Перейти в товары для Ford</a></li>
+                    <li><a href="catalog/GM.html">Перейти в товары для GM</a></li>
+                </ul>
+            </li>
+        </ul>
         <!--        убираем обтекание элементов-->
         <div style="clear: both;"></div>
     </div>
-    <h3 style="margin-bottom: 0px">Регистрация</h3>
-    <input type="checkbox" id="press" class="del" />
-    <label for="press" class="del">Нажмите для регистрации</label>
-    <div>
-        <form name=RegistrationInfo action="#">
-            <table class='registrationForm'>
-                <tr>
-                    <th rowspan='2'>
-                        <p1>Ваше имя:</p1>
-                    </th>
-                    <td rowspan='2'>
-                        <p2>
-                            <input id="PersonName" type="text" placeholder="Ваше имя" size="20" style="height:17px"> </p2>
-                    </td>
-                    <th colspan="2" rowspan="2">Пол</th>
-                    <th colspan="2">
-                        <p3>Ваши увлечения:&#8195</p3>
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <p3>&#8195Спорт</p3>
-                        <input type="checkbox"> </td>
-                    <td rowspan="3">
-                        <p3>&#8195Игра на музыкальных инструментах</p3>
-                        <input type="checkbox"> </td>
-                </tr>
-                <tr>
-                    <th rowspan='2'>
-                        <p1>Пароль:</p1>
-                    </th>
-                    <td rowspan='2'>
-                        <p2>
-                            <input id="PersonPassword" type="password" placeholder="Пароль" size="20" style="height:17px"> </p2>
-                    </td>
-                    <td rowspan="2">М
-                        <input type="radio" name="sex"> </td>
-                    <td rowspan="2">Ж
-                        <input type="radio" name="sex"> </td>
-                    <td>
-                        <p3>&#8195IT</p3>
-                        <input type="checkbox"> </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p3>&#8195Танцы</p3>
-                        <input type="checkbox"> </td>
-                </tr>
-            </table>
-            <input type="submit" value="Отправить данные">
-            <input type="reset" value="Отмена"> </form>
+    <div class='container' style="height: 260px">
+        <div class='mainCenter'>
+            <h3 style="margin-bottom: 0px">Регистрация</h3>
+            <input type="checkbox" id="press" class="del" />
+            <label for="press" class="del">Нажмите для регистрации</label>
+            <div>
+                <form name=RegistrationInfo action="#">
+                    <table class='registrationForm'>
+                        <tr>
+                            <th rowspan='2'>
+                                <p1>Ваше имя:</p1>
+                            </th>
+                            <td rowspan='2'>
+                                <p2>
+                                    <input id="PersonName" type="text" placeholder="Ваше имя" size="20" style="height:17px"> </p2>
+                            </td>
+                            <th colspan="2" rowspan="2">Пол</th>
+                            <th colspan="2">
+                                <p3>Ваши увлечения:&#8195</p3>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p3>&#8195Спорт</p3>
+                                <input type="checkbox"> </td>
+                            <td rowspan="3">
+                                <p3>&#8195Игра на музыкальных инструментах</p3>
+                                <input type="checkbox"> </td>
+                        </tr>
+                        <tr>
+                            <th rowspan='2'>
+                                <p1>Пароль:</p1>
+                            </th>
+                            <td rowspan='2'>
+                                <p2>
+                                    <input id="PersonPassword" type="password" placeholder="Пароль" size="20" style="height:17px"> </p2>
+                            </td>
+                            <td rowspan="2">М
+                                <input type="radio" name="sex"> </td>
+                            <td rowspan="2">Ж
+                                <input type="radio" name="sex"> </td>
+                            <td>
+                                <p3>&#8195IT</p3>
+                                <input type="checkbox"> </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p3>&#8195Танцы</p3>
+                                <input type="checkbox"> </td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="Отправить данные">
+                    <input type="reset" value="Отмена"> </form>
+            </div>
+        </div>
     </div>
     <div class='footer'>
-        <hr align="center" size="2" color="#aaaaaa" />
-        <h7>Geekbrains education</h7>
-        <br />
-        <h7>Все права защищены &copy;</h7> <a href="https://geekbrains.ru/">Geekbrains</a> </div>
+        <div>
+            <h7>Geekbrains education</h7>
+            <br />
+            <h7>Все права защищены &copy;</h7> <a href="https://geekbrains.ru/">Geekbrains</a></div>
+    </div>
 </body>
 
 </html>

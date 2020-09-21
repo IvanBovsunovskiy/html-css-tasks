@@ -10,45 +10,82 @@
     <h1>Контакты</h1>
     <div class='header'>
         <div> <img src="images/logo.jpg" alt="logo"> </div>
-        <div>
-            <ul class="menu">
-                <li><a href="index.html">На главную</a></li>
-                <li><a href="catalog/shop.html">В каталог интернет магазина</a></li>
-            </ul>
-        </div>
+        <ul class="menu">
+            <li><a href="catalog/shop.html">Перейти в товары каталога</a>
+                <ul class='dropdownMenu'>
+                    <li><a href="catalog/shop.html">Перейти в общий список товаров</a></li>
+                    <li><a href="catalog/vw.html">Перейти в товары для VW</a></li>
+                    <li><a href="catalog/ford.html">Перейти в товары для Ford</a></li>
+                    <li><a href="catalog/GM.html">Перейти в товары для GM</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html">На главную</a></li>
+        </ul>
         <!--        убираем обтекание элементов-->
         <div style="clear: both;"></div>
     </div>
-    <table>
-        <tr>
-            <th>
-                <p1>Телефон:</p1>
-            </th>
-            <td>
-                <p2 id="phoneNumberPlusEmail">&#8195+7-333-333-33-33</p2>
-            </td>
-            <!--            широкий пробел &#8195-->
-        </tr>
-        <tr>
-            <th>
-                <p1>E-mail: </p1>
-            </th>
-            <td>
-                <p2 id="phoneNumberPlusEmail">&#8195qwerty@qwerty.com</p2>
-            </td>
-        </tr>
-    </table>
-    <h3 style="font-size: 16px">Если вы хотите чтобы мы связались с вами напишите нам  </h3>
-    <input id="clientmessage" type="" placeholder="Укажите ваш e-mail" size="100" style="height:50px">
-    <h3 style="font-size: 16px">и укажите ваш e-mail:</h3>
-    <input id="clientEmail" type="text" placeholder="Напишите нам" size="20" style="height:17px"><br>
-    <input type="submit" value="Отправить данные">
-    
+    <div class="container" style="width: 600px; height: 300px">
+        <div class='contatcsBlock'>
+            <table class="tableWOBorder">
+                <tr>
+                    <th>
+                        <p1>Телефон:</p1>
+                    </th>
+                    <td>
+                        <p2 id="phoneNumberPlusEmail">&#8195+7-333-333-33-33</p2>
+                    </td>
+                    <!--            широкий пробел &#8195-->
+                </tr>
+                <tr>
+                    <th>
+                        <p1>E-mail: </p1>
+                    </th>
+                    <td>
+                        <p2 id="phoneNumberPlusEmail">&#8195qwerty@qwerty.com</p2>
+                    </td>
+                </tr>
+            </table>
+            <h3 style="font-size: 16px">Если вы хотите чтобы мы связались с вами напишите нам </h3>
+            <input id="clientmessage" type="" placeholder="Укажите ваш e-mail" size="35" style="height:50px">
+            <h3 style="font-size: 16px">и укажите ваш e-mail:</h3>
+            <input id="clientEmail" type="text" placeholder="Напишите нам" size="20" style="height:17px">
+            <br>
+            <input type="submit" value="Отправить данные">
+        </div>
+        <div class='contatcsBlock' id='map'><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af4a3ffa11088b987161bb560a1705a40a695c9330d83243cec5687d0baf7510f&amp;source=constructor" width="280" height="280" frameborder="0"></iframe></div>
+    </div>
     <div class='footer'>
-        <hr align="center" size="2" color="#aaaaaa" />
-        <h7>Geekbrains education</h7>
-        <br />
-        <h7>Все права защищены &copy;</h7> <a href="https://geekbrains.ru/">Geekbrains</a> </div>
+        <div>
+            <h7>Geekbrains education</h7>
+            <br />
+            <h7>Все права защищены &copy;</h7> <a href="https://geekbrains.ru/">Geekbrains</a></div>
+    </div>
+<!--    гугл карты с ошибкой и через java script: убираем iframe и все работает-->
+<!--
+    <script type="text/javascript">
+        // Определяем переменную map
+        var map;
+        // Функция initMap которая отрисует карту на странице
+        function initMap() {
+            // В переменной map создаем объект карты GoogleMaps и вешаем эту переменную на <div id="map"></div>
+            map = new google.maps.Map(document.getElementById('map'), {
+                // При создании объекта карты необходимо указать его свойства
+                // center - определяем точку на которой карта будет центрироваться
+                center: {lat: 59.9768, lng: 30.3648},
+                // zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
+                zoom: 18
+            });
+        }
+    </script>
+-->
+
+    <!-- 3. Подключаем библиотеку Google Maps Api, чтобы создать карту -->
+    <!-- Атрибуты async и defer - позволяют загружать этот скрипт асинхронно, вместе с загрузкой всей страницы  -->
+    <!-- В подключении библиотеки Google Maps Api в конце указан параметр callback, после  подключения и загрузки этого Api сработает функция initMap для отрисовки карты,  которую мы описали выше -->
+<!--    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>-->
+
+<!--яндекс карты-->
+
 </body>
 
 </html>
