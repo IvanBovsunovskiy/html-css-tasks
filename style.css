@@ -8,11 +8,13 @@
 /*родительский блок*/
 
 .container {
+    display: flex;
+    flex-direction: column;
     padding:3px;
     width: 700px;
     margin: 0 auto;
     position: relative;
-    height: 100px;
+    height: 120px;
     z-index: 3;
     overflow: auto;
 }
@@ -173,7 +175,8 @@ h1 {
 }
 
 .catalog{
-    float: left;
+/*    в контейнере со стилем display:flex можно задать направление группировки*/
+/*    float: left;*/
     width: 30%;
     padding: 5px;
 }
@@ -390,4 +393,14 @@ p1 {
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     /*    font-family: cursive;*/
+}
+.buy:hover{
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border: 4px solid lightgreen;
+}
+.buy:active{
+    background-color: lightgreen;
 }
